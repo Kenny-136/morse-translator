@@ -1,0 +1,1 @@
+import { morseToAlphabet, alphabetToMorse } from "./script";
