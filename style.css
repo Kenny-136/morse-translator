@@ -8,6 +8,7 @@ header {
   border-bottom: 1px solid grey;
   padding: 1.5rem;
 }
+
 main {
   display: flex;
   flex-direction: row;
@@ -18,10 +19,12 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  label {
-    margin-bottom: 1rem;
-  }
-  textarea {
-    border: 2px solid gray;
-  }
 }
+section label {
+  margin-bottom: 1rem;
+}
+section textarea {
+  border: 2px solid gray;
+}
+
+/*# sourceMappingURL=style.css.map */
