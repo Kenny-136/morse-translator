@@ -21,6 +21,7 @@ const alphabetToMorseObject = {
   "S": "...",
   "T": "-",
   "U": "..-",
+  "V": "...-",
   "W": ".--",
   "X": "-..-",
   "Y": "-.--",
@@ -28,11 +29,11 @@ const alphabetToMorseObject = {
 }
 // Here is the Function to Translate an alphabet String into an Morse Code.
 
-export const morseToAlphabet = (str) => {
+export const alphabetToMorse= (str) => {
   const resultArr = str.split('').reduce((result, current) => {
     alphabetToMorseObject[current.toUpperCase()] ? result.push(alphabetToMorseObject[current.toUpperCase()]) : result.push('/')
     return result
-  } , [])
+  }, [])
   return resultArr.join(' ')
 }
 
@@ -69,6 +70,7 @@ const morseToAlphabetObject = {
   '...': 'S',
   '-': 'T',
   '..-': 'U',
+  '...-': 'V',
   '.--': 'W',
   '-..-': 'X',
   '-.--': 'Y',
@@ -76,10 +78,11 @@ const morseToAlphabetObject = {
 }
 
 // A Function to Translate a Morse Code String Into Alphabet Words.
-export const alphabetToMorse = (str) => {
+export const morseToAlphabet = (str) => {
   const resultArr = str.split(' ').reduce((result, current) => {
     morseToAlphabetObject[current] ? result.push(morseToAlphabetObject[current]) : result.push(' ')
     return result
-  }, [])
+  } , [])
   return resultArr.join('')
 }
+
