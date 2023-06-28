@@ -29,7 +29,7 @@ const alphabetToMorseObject = {
 }
 // Here is the Function to Translate an alphabet String into an Morse Code.
 
-export const alphabetToMorse= (str) => {
+const alphabetToMorse= (str) => {
   const resultArr = str.split('').reduce((result, current) => {
     alphabetToMorseObject[current.toUpperCase()] ? result.push(alphabetToMorseObject[current.toUpperCase()]) : result.push('/')
     return result
@@ -78,7 +78,7 @@ const morseToAlphabetObject = {
 }
 
 // A Function to Translate a Morse Code String Into Alphabet Words.
-export const morseToAlphabet = (str) => {
+const morseToAlphabet = (str) => {
   const resultArr = str.split(' ').reduce((result, current) => {
     morseToAlphabetObject[current] ? result.push(morseToAlphabetObject[current]) : result.push(' ')
     return result
@@ -86,3 +86,19 @@ export const morseToAlphabet = (str) => {
   return resultArr.join('')
 }
 
+const alphabetTranslateBtn = document.querySelector('#alphabetTranslateBtn')
+const alphabetTranslateInput = document.querySelector('#alphabetInput')
+
+const morseTranslateBtn = document.querySelector('#morseTranslateBtn')
+const morseTranslateInput = document.querySelector('#morseInput')
+
+
+alphabetTranslateBtn.addEventListener("click", () => {
+  const result = alphabetToMorse(alphabetTranslateInput.value)
+  morseTranslateInput.value = result
+})
+
+morseTranslateBtn.addEventListener("click", () => {
+  const result = morseToAlphabet(morseTranslateInput.value)
+  alphabetTranslateInput.value = result
+})
