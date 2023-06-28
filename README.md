@@ -1,6 +1,7 @@
 # Morse Code Translator
 ## This is a NOLOGY Challenge that requires cohorts to create a web page Morse Code Translator.
 
+## Try it [here](https://kenny-136.github.io/morse-translator/)
 ## MVP
 -   It require the User Interface to look good but remain simple
 -   Create a user interface that allows the user to either input some English text or some Morse Code
