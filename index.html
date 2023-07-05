@@ -10,18 +10,16 @@
 <body>
   <header>
     <h1>Morse Translate</h1>
-    <h3>Words typed into Alphabet TextArea will be translated and pasted into Morse Code Text Area, and vice versa </h3>
   </header>
   <main>
-    <section class="alphabet">
-      <label for="alphabetInput">Alphabet: </label>
-      <textarea name="" id="alphabetInput"  rows="10" placeholder="Type Text here"></textarea>
-      <button id="alphabetTranslateBtn">Translate!</button>
+    <section class="input">
+      <label for="input">Input: </label>
+      <textarea name="" id="input" rows="10" placeholder="Type Morse code using '.', '-' or '_', using a spaces between letters and '/' between words."></textarea>
+      <button id="translateBtn">Translate!</button>
     </section>
-    <section class="morse">
-      <label for="morseInput">Morse: </label>
-      <textarea name="" id="morseInput" rows="10" placeholder="Type Morse code using '.', '-' or '_', using a spaces between letters and '/' between words."></textarea>
-      <button id="morseTranslateBtn">Translate!</button>
+    <section class="result">
+      <label for="morseInput">Result: </label>
+      <p id="result"></p>
     </section>
   </main>
 </body>

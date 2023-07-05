@@ -1,4 +1,4 @@
-import { alphabetToMorse, morseToAlphabet } from "./script";
+import {translate} from "./translate";
 const string = 'HELLO'
 const stringWithSpaces = 'HELLO WORLD AND UNIVERSE'
 const morseString = '.... . .-.. .-.. ---'
@@ -9,25 +9,25 @@ const morseLongString = '.... . .-.. .-.. --- / .--. .-.. .- -. . - ... / -- ---
 describe("test cases for morse to alphabet function", () => {
   it("should return a string",
   () => {
-    expect(typeof morseToAlphabet(string)).toBe("string")
+    expect(typeof translate(string)).toBe("string")
   })
   it("should handle space and turn it into '/' ", () => {
-    expect(morseToAlphabet(morseStringWithSpaces)).toBe(stringWithSpaces)
+    expect(translate(morseStringWithSpaces)).toBe(stringWithSpaces)
   })
   it("should handle long lines of string and translate into morse" , () => {
-    expect(morseToAlphabet(morseLongString)).toBe(longString)
+    expect(translate(morseLongString)).toBe(longString)
   })
 })
 
 describe("Test cases for alphabet to morse translate function", () => {
   it("should return a string",
   () => {
-    expect(typeof alphabetToMorse(morseString)).toBe("string")
+    expect(typeof translate(morseString)).toBe("string")
   })
   it("should handle space and turn it into a '/'", () => {
-    expect(alphabetToMorse(stringWithSpaces)).toBe(morseStringWithSpaces)
+    expect(translate(stringWithSpaces)).toBe(morseStringWithSpaces)
   })
   it("should handle long lines of string and translate into morse" , () => {
-    expect(alphabetToMorse(longString)).toBe(morseLongString)
+    expect(translate(longString)).toBe(morseLongString)
   })
 })
