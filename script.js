@@ -27,7 +27,18 @@ const alphabetToMorseObject = {
   "W": ".--",
   "X": "-..-",
   "Y": "-.--",
-  "Z": "--.."
+  "Z": "--..",
+  1: ".----",
+  2: "..---",
+  3: "...--",
+  4: "....-",
+  5: ".....",
+  6: "-....",
+  7: "--...",
+  8: "---..",
+  9: "----.",
+  0: "-----"
+
 }
 // Here is the Function to Translate an alphabet String into an Morse Code.
 
@@ -76,7 +87,17 @@ const morseToAlphabetObject = {
   '.--': 'W',
   '-..-': 'X',
   '-.--': 'Y',
-  '--..': 'Z'
+  '--..': 'Z',
+  ".----": 1,
+  "..---": 2,
+  "...--": 3,
+  "....-": 4,
+  ".....": 5,
+  "-....": 6,
+  "--...": 7,
+  "---..": 8,
+  "----.": 9,
+  "-----": 0
 }
 
 // A Function to Translate a Morse Code String Into Alphabet Words.
@@ -92,11 +113,15 @@ const morseToAlphabet = (str) => {
 const inputSection = document.querySelector('.input')
 const resultSection = document.querySelector('#result')
 
-const translateBtn = document.querySelector('#translateBtn')
+// const translateBtn = document.querySelector('#translateBtn')
 
-translateBtn.addEventListener("click", () => {
-  const result = translate(input.value)
-  resultSection.innerText = result
+// translateBtn.addEventListener("click", () => {
+//   const result = translate(input.value)
+//   resultSection.innerText = result
+// })
+
+inputSection.addEventListener('input', (e) => {
+  resultSection.innerText = translate(input.value)
 })
 
 const translate = (str) => {
@@ -114,6 +139,8 @@ const translate = (str) => {
       return result
     }, [])
     return resultArr.join(' ')
+  } else if (str === '') {
+    return ''
   } else {
     return `Invalid Input. Please Only Put "." , "_" and "/"(as a space Substitute) to Translate Morse Code, or Alphabets (A-Z) To Translate Alphabets.`
   }
