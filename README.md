@@ -1,15 +1,15 @@
 # Morse Code Translator
-## This is a NOLOGY Challenge that requires cohorts to create a web page Morse Code Translator.
 
-## Try it [here](https://kenny-136.github.io/morse-translator/)
-## MVP
--   It require the User Interface to look good but remain simple
--   Create a user interface that allows the user to either input some English text or some Morse Code
--   Create JS functions that would allow the user to:
+## [Try it Live here](https://kenny-136.github.io/morse-translator/)
 
-    -   translate their English text into Morse Code
-    -   Morse Code into English text
+### This an application that translates words / sentences created with English alphabets (A-Z) into Morse Code and vice-versa.
 
--   Make sure to add unit tests for your translating functions
+- Morse code input are separated with space.
+- English word translated into morse code are separated by a "/"
 
--   Make sure to handle spaces properly (ie. there is 1 space between English words, but one space between Morse Code characters)
+### Tools
+
+- HTML
+- SCSS
+- JavaScript
+- Jest (For Testing Functionality)
